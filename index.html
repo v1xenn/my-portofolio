@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> <!-- Ubah <header> menjadi <head> -->
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website</title>
@@ -21,23 +21,27 @@
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#education">Education</a>
-            <a href="#service">Service</a>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#services">Services</a>
+            <a href="#portofolio">Portofolio</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <!-- HOME SECTION -->
-    <section class="home" id="home"> <!-- Hilangkan tanda '#' pada class -->
+    <section class="home" id="home"> <!-- ID menggunakan tanda # untuk link -->
         <div class="home-content">
             <h1>Hi, it's <span>Naya</span></h1>
             <h3 class="typing-text">
-                I'm a <span> </span> <!-- Pastikan ada teks atau efek typing -->
+                I'm a <span></span> <!-- Pastikan ada teks atau efek typing -->
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
             <!-- Social Media Icons -->
             <div class="social-icons">
+                <a href="mailto:ranaya.mahitsa@gmail.com">
+                    <i class="bx bxl-gmail"></i>
+                </a>
+
                 <a href="https://instagram.com/ranaya.cm_">
                     <i class="bx bxl-instagram"></i>
                 </a>
@@ -53,17 +57,100 @@
         </div>
     </section>
 
+    <!-- ABOUT SECTION -->
     <section class="about" id="about">
         <div class="about-img">
-            <img src="img/profil2.jpg">
+            <img src="img/profil2.jpg" alt="About Image">
         </div>
 
         <div class="about-content">
             <h2>About <span>Me</span></h2>
-            <p>lorem ipsum</p>
-            <a href="#" class="btn">Read More</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
     </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <h2 class="heading">Services</h2>
+        <div class="services-container">
+            <div class="service-box">
+                <div class="service-info">
+                    <i class='bx bx-paint'></i>
+                    <h4>Illustration</h4>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-info">
+                    <i class='bx bx-laptop'></i>
+                    <h4>Programming</h4>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="portofolio" id="portofolio">
+        <h2 class="heading">My Portofolio</h2>
+        <div class="portofolio-box">
+            <div class="portofolio-card">
+                <img src="img/art1.png" alt=" ">
+                <h3>Kitsue with Her Little Magic</h3>
+            </div>
+            <div class="portofolio-card">
+                <img src="img/art3.png" alt=" ">
+                <h3>Looking From The Side</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form action="#">
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" placeholder="Nama Lengkap">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Nomor HP">
+                    <input type="text" placeholder="Subjek">
+                </div>
+            </div>
+            <div class="input-group-2">
+                <textarea name="" id="" placeholder="Pesan" cols="30" rows="10"></textarea>
+                <input type="submit" value="send Message" class="btn">
+            </div>
+
+        </form>
+
+
+    </section>
+    <footer class="footer">
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="mailto:ranaya.mahitsa@gmail.com">
+                    <i class="bx bxl-gmail"></i>
+                </a>
+
+                <a href="https://instagram.com/ranaya.cm_">
+                    <i class="bx bxl-instagram"></i>
+                </a>
+                <a href="https://github.com/v1xenn">
+                    <i class="bx bxl-github"></i>
+                </a>
+            </div>
+
+            <ul class="list">
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+
+                <p class="copyright">
+                    Ranaya Chintya mahitsa
+                </p>
+            </ul>
+    </footer>
+
 
     <script src="script.js"></script>
 </body>
