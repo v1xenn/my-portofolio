@@ -236,7 +236,7 @@ section {
     box-shadow: 0 0 25px var(--main-color);
     border-radius: 3rem;
     font-size: 1.8rem;
-    color:white;
+    color: white;
     border: 2px solid transparent;
     font-weight: 500;
     transition: 0.3s ease-in-out;
@@ -245,16 +245,17 @@ section {
 .btn:hover {
     transform: scale(1.05);
     box-shadow: 0 0 25px var(--main-color),
-                0 0 50px var(--main-color);
+        0 0 50px var(--main-color);
 }
 
-.about{
+.about {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10rem;
     background: var(--second-bg-color);
 }
+
 .about-img img {
     width: 30vw;
     border-radius: 20%;
@@ -274,7 +275,7 @@ section {
     text-align: justify;
 }
 
-.about-content .btn{
+.about-content .btn {
     margin: 3rem 0;
 }
 
@@ -282,9 +283,11 @@ section {
 ::-webkit-scrollbar {
     width: 20px;
 }
+
 ::-webkit-scrollbar-thumb {
     background-color: var(--main-color);
 }
+
 ::-webkit-scrollbar-track {
     background-color: var(--bg-color);
 }
@@ -296,7 +299,8 @@ section {
 }
 
 .heading {
-    font-size: 3rem; /* Menyesuaikan font-size */
+    font-size: 3rem;
+    /* Menyesuaikan font-size */
     text-align: center;
     margin: 3rem 0;
 }
@@ -347,7 +351,7 @@ section {
     width: 20px;
     background-color: var(--main-color);
     box-shadow: 0 0 15px var(--main-color),
-                0 0 30px var(--main-color);
+        0 0 30px var(--main-color);
     position: absolute;
     left: calc(50% - 10px);
     border-radius: 50%;
@@ -391,6 +395,7 @@ section {
 }
 
 @media (max-width: 768px) {
+
     .timeline-item:nth-child(odd),
     .timeline-item:nth-child(even) {
         padding-left: 0;
@@ -415,18 +420,20 @@ section {
 
 .services {
     background-color: var(--bg-color);
-    color:#8bcfff
+    color: #8bcfff
 }
 
 .services h2 {
     color: var(--text-color);
 }
+
 .services-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     align-items: center;
     gap: 2.5rem;
 }
+
 .service-box {
     display: flex;
     justify-content: center;
@@ -438,12 +445,14 @@ section {
     border: 5px solid transparent;
     transition: 0.4s ease-in-out;
 }
+
 .service-box:hover {
     background: var(--second-bg-color);
     color: var(--main-color);
     border: 5px solid var(--main-color);
     transform: scale(1.03);
 }
+
 .service-info {
     display: flex;
     flex-direction: column;
@@ -452,24 +461,28 @@ section {
     align-items: center;
     padding: 5rem;
 }
-.service-info h4 { 
+
+.service-info h4 {
     font-size: 3rem;
     margin: 1rem 0;
     font-weight: 800;
     line-height: 2;
 }
+
 .service-info i {
     font-size: 8rem;
 
 }
+
 .skill {
     background-color: var(--bg-color);
-    color:#c3e6ff
+    color: #c3e6ff
 }
 
 .skill h2 {
     color: var(--text-color);
 }
+
 .services-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -505,7 +518,7 @@ section {
     padding: 5rem;
 }
 
-.skill-info h4 { 
+.skill-info h4 {
     font-size: 4rem;
     margin: 2rem 0;
     font-weight: 800;
@@ -518,17 +531,21 @@ section {
 
 .portofolio {
     background-color: var(--second-bg-color);
-    padding: 3rem; /* Tambahkan padding lebih besar untuk ruang di sekitar keseluruhan section */
+    padding: 3rem;
+    /* Tambahkan padding lebih besar untuk ruang di sekitar keseluruhan section */
 }
+
 .portofolio p {
     font-size: 2.8rem;
     text-align: center;
     margin-bottom: 3rem;
 }
+
 .portofolio-box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 4rem; /* Tambahkan gap lebih besar antar portofolio-card */
+    gap: 4rem;
+    /* Tambahkan gap lebih besar antar portofolio-card */
 }
 
 .portofolio-card {
@@ -540,12 +557,14 @@ section {
     background-color: var(--bg-color);
     border: 2px solid var(--main-color);
     border-radius: 3rem;
-    padding: 4rem; /* Tambahkan padding lebih besar untuk ruang dalam portofolio-card */
+    padding: 4rem;
+    /* Tambahkan padding lebih besar untuk ruang dalam portofolio-card */
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 0 5px var(--main-color);
     transition: 0.3s ease;
-    margin: 1rem; /* Tambahkan margin agar ada ruang tambahan di luar card */
+    margin: 1rem;
+    /* Tambahkan margin agar ada ruang tambahan di luar card */
 }
 
 .portofolio-card:hover {
@@ -558,22 +577,26 @@ section {
     height: auto;
     border-radius: 2em;
     object-fit: cover;
-    margin-bottom: 2rem; /* Tambahkan jarak antara gambar dan teks */
+    margin-bottom: 2rem;
+    /* Tambahkan jarak antara gambar dan teks */
 }
 
 .portofolio-card h3 {
     font-size: 2rem;
-    margin-top: 1.5rem; /* Sedikit lebih besar untuk memberi ruang pada judul */
+    margin-top: 1.5rem;
+    /* Sedikit lebih besar untuk memberi ruang pada judul */
 }
 
 .contact {
     background-color: var(--bg-color);
 }
+
 .contact h2 {
     margin-bottom: 3rem;
     color: var(--text-color);
 }
-.contact form{
+
+.contact form {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -581,6 +604,7 @@ section {
     margin: 5rem 0;
     text-align: center;
 }
+
 .contact form .input-box input,
 .contact form textarea {
     width: 100%;
@@ -610,8 +634,8 @@ section {
 
 .footer ul li a {
     color: white;
-    border-bottom: 3px solid transparent; 
-    transition: 0.3s ease-in-out; 
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease-in-out;
 }
 
 .footer ul li a:hover {
@@ -624,10 +648,11 @@ section {
     font-size: 16px;
 }
 
-@media(max-width:1285px){
-    #menu-icon{
+@media(max-width:1285px) {
+    #menu-icon {
         display: block;
     }
+
     .navbar {
         position: absolute;
         top: 100%;
@@ -639,41 +664,51 @@ section {
         border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
     }
+
     .navbar a {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
         color: var(--text-color);
     }
-    .navbar.active{
+
+    .navbar.active {
         display: block;
     }
+
     .gradient-btn {
         display: none;
     }
+
     .home {
         flex-direction: column-reverse;
         margin: 5rem 0;
         gap: 5rem;
     }
+
     .home-content {
         align-items: center;
         text-align: center;
     }
+
     .home-img img {
         width: 56vw;
     }
+
     .about {
         flex-direction: column-reverse;
         text-align: center;
     }
-    .about h2{
+
+    .about h2 {
         text-align: center;
         margin: 2rem 0;
     }
+
     .about-img {
         width: 52vw;
     }
+
     .contact form {
         flex-direction: column-reverse;
     }
