@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 /* Logo Styling */
@@ -16,12 +17,11 @@
     --bg-color: #ffffff;
     --second-bg-color: #ffffff;
     --text-color: #8eaefc;
-    --main-color: #60a3cf;
 }
 
 /* Global Styling */
 html {
-    font-size: 60%;
+    font-size: 66%;
     overflow-x: hidden;
 }
 
@@ -38,7 +38,7 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    padding: 3rem 15%;
+    padding: 2.5rem 20%;
     background: #c6d2ff;
     backdrop-filter: blur(10px);
     display: flex;
@@ -62,6 +62,13 @@ body {
 .navbar a:hover {
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+    display: none;
 }
 
 /* Gradient Button Styling */
@@ -156,11 +163,11 @@ section {
 .typing-text span::after {
     content: "";
     position: absolute;
-    width: calc(80% + 1px);
+    width: calc(100% + 8px);
     height: 100%;
     border-left: 0 solid #ffffff;
     right: -5;
-    animation: cursor 0.6s infinite;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
 }
 
 @keyframes cursor {
@@ -173,7 +180,7 @@ section {
 
     0%,
     20% {
-        content: "an Information System Student";
+        content: "an IS Student";
     }
 
     21%,
@@ -193,7 +200,7 @@ section {
 
     81%,
     100% {
-        content: "a Delulu";
+        content: "a Designer";
     }
 }
 
@@ -249,7 +256,7 @@ section {
     background: var(--second-bg-color);
 }
 .about-img img {
-    width: 20vw;
+    width: 30vw;
     border-radius: 20%;
     box-shadow: 0 0 25px var(--main-color);
     transition: 0.4s ease-in-out;
@@ -259,10 +266,12 @@ section {
 .about-content h2 {
     font-size: 7rem;
     text-align: left;
+    margin-bottom: 2.5rem;
 }
 
-.about-content {
-    font-size: 1.8rem;
+.about-content p {
+    font-size: 1.6rem;
+    text-align: justify;
 }
 
 .about-content .btn{
@@ -278,6 +287,124 @@ section {
 }
 ::-webkit-scrollbar-track {
     background-color: var(--bg-color);
+}
+
+:root {
+    --main-color: #4b5fb7;
+    --second-bg-color: #f5f5f5;
+    --bg-color: #ffffff;
+}
+
+.heading {
+    font-size: 3rem; /* Menyesuaikan font-size */
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.education {
+    padding: 50px 15px;
+    background: var(--second-bg-color);
+}
+
+.education h2 {
+    margin-bottom: 3rem;
+}
+
+.timeline-items {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.timeline-items::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: var(--main-color);
+    left: calc(50% - 2.5px);
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    padding-left: calc(50% + 30px);
+}
+
+.timeline-dot {
+    height: 20px;
+    width: 20px;
+    background-color: var(--main-color);
+    box-shadow: 0 0 15px var(--main-color),
+                0 0 30px var(--main-color);
+    position: absolute;
+    left: calc(50% - 10px);
+    border-radius: 50%;
+    top: 10px;
+}
+
+.timeline-date {
+    font-size: 18px;
+    font-weight: 700;
+    color: #8aa3fa;
+    margin: 6px 0 15px;
+}
+
+.timeline-content {
+    background-color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    padding: 20px 40px;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px var(--main-color);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.timeline-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+.timeline-content h3 {
+    font-size: 18px;
+    color: var(--main-color);
+    margin: 0 0 10px;
+    font-weight: 600;
+}
+
+.timeline-content p {
+    color: #4b54b7;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+@media (max-width: 768px) {
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .timeline-items::before {
+        left: 20px;
+    }
+
+    .timeline-dot {
+        left: 15px;
+    }
 }
 
 .heading {
@@ -389,18 +516,21 @@ section {
     font-size: 6rem;
 }
 
-
 .portofolio {
-    background-color: var(--second-bg-color); 
+    background-color: var(--second-bg-color);
+    padding: 3rem; /* Tambahkan padding lebih besar untuk ruang di sekitar keseluruhan section */
 }
-
+.portofolio p {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
 .portofolio-box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    place-items: center;
-    gap: 3rem;
-    row-gap: 5rem;
+    gap: 4rem; /* Tambahkan gap lebih besar antar portofolio-card */
 }
+
 .portofolio-card {
     display: flex;
     flex-direction: column;
@@ -409,27 +539,33 @@ section {
     text-align: center;
     background-color: var(--bg-color);
     border: 2px solid var(--main-color);
-     border-radius: 3rem;
-     gap: 2rem;
-     padding: 5rem 2rem;
-     overflow: hidden;
-     cursor: pointer;
-     box-shadow: 0 0 5px var(--main-color);
-     transition: 0.3s ease;
+    border-radius: 3rem;
+    padding: 4rem; /* Tambahkan padding lebih besar untuk ruang dalam portofolio-card */
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--main-color);
+    transition: 0.3s ease;
+    margin: 1rem; /* Tambahkan margin agar ada ruang tambahan di luar card */
 }
-.portofolio-card-hover {
-    box-shadow: 0 0 25px var(--main-color),
-                0 0 50px var(--main-color);
+
+.portofolio-card:hover {
+    box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
     transform: scale(1.02);
 }
+
 .portofolio-card img {
-    max-width: 300px;
+    max-width: 100%;
+    height: auto;
     border-radius: 2em;
     object-fit: cover;
+    margin-bottom: 2rem; /* Tambahkan jarak antara gambar dan teks */
 }
+
 .portofolio-card h3 {
-     font-size: 2.5rem;
+    font-size: 2rem;
+    margin-top: 1.5rem; /* Sedikit lebih besar untuk memberi ruang pada judul */
 }
+
 .contact {
     background-color: var(--bg-color);
 }
@@ -455,4 +591,90 @@ section {
     border: 2px solid var(--main-color);
     margin: 1.5rem 0;
     resize: none;
+}
+
+.footer {
+    background-color: var(--second-bg-color);
+    padding: 50px 0;
+}
+
+.footer .social-icons {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.footer ul li a {
+    color: white;
+    border-bottom: 3px solid transparent; 
+    transition: 0.3s ease-in-out; 
+}
+
+.footer ul li a:hover {
+    border-bottom: 3px solid var(--main-color);
+}
+
+.footer .copyright {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+@media(max-width:1285px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3rem;
+        background: #ffffff;
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+    }
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: var(--text-color);
+    }
+    .navbar.active{
+        display: block;
+    }
+    .gradient-btn {
+        display: none;
+    }
+    .home {
+        flex-direction: column-reverse;
+        margin: 5rem 0;
+        gap: 5rem;
+    }
+    .home-content {
+        align-items: center;
+        text-align: center;
+    }
+    .home-img img {
+        width: 56vw;
+    }
+    .about {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .about h2{
+        text-align: center;
+        margin: 2rem 0;
+    }
+    .about-img {
+        width: 52vw;
+    }
+    .contact form {
+        flex-direction: column-reverse;
+    }
 }
