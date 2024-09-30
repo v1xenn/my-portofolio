@@ -597,6 +597,15 @@ section {
 }
 
 @media(max-width:1285px) {
+    html{
+        font-size: 55%;
+    }
+    .services-container{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 5rem;
+    }
+
     #menu-icon {
         display: block;
     }
@@ -682,5 +691,8 @@ section {
     }
     .timeline-dot {
         left: 0;
+    }
+    .footer{
+        padding: 2rem 3%;
     }
 }
