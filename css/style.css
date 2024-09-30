@@ -58,6 +58,9 @@ body {
     /* Perbaiki penulisan transition */
     border-bottom: 3px solid transparent;
 }
+.navbar.active {
+    display: block;
+}
 
 .navbar a:hover {
     color: var(--main-color);
@@ -306,7 +309,7 @@ section {
 }
 
 .education {
-    padding: 50px 15px;
+    padding: 100px 100px;
     background: var(--second-bg-color);
 }
 
@@ -418,23 +421,24 @@ section {
     margin: 5rem 0;
 }
 
-.services {
+.services, .languages {
     background-color: var(--bg-color);
-    color: #8bcfff
+    color: #8bcfff;
 }
 
-.services h2 {
+.services h2, .languages h2 {
     color: var(--text-color);
 }
 
 .services-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     align-items: center;
     gap: 2.5rem;
+    padding: 20px;
 }
 
-.service-box {
+.service-box, .skill-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -453,7 +457,7 @@ section {
     transform: scale(1.03);
 }
 
-.service-info {
+.service-info, .skill-info {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -462,76 +466,20 @@ section {
     padding: 5rem;
 }
 
-.service-info h4 {
+.service-info h4, .skill-info h4 {
     font-size: 3rem;
     margin: 1rem 0;
     font-weight: 800;
     line-height: 2;
 }
 
-.service-info i {
+.service-info i, .skill-info i {
     font-size: 8rem;
-
-}
-
-.skill {
-    background-color: var(--bg-color);
-    color: #c3e6ff
-}
-
-.skill h2 {
-    color: var(--text-color);
-}
-
-.services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    align-items: center;
-    gap: 2.5rem;
-}
-
-.services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.skill-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--main-color);
-    height: 200px;
-    border-radius: 5rem;
-    cursor: pointer;
-    border: 5px solid transparent;
-    transition: 0.4s ease-in-out;
-}
-
-.skill-info {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem;
-}
-
-.skill-info h4 {
-    font-size: 4rem;
-    margin: 2rem 0;
-    font-weight: 800;
-    line-height: 1;
-}
-
-.skill-info i {
-    font-size: 6rem;
 }
 
 .portofolio {
     background-color: var(--second-bg-color);
-    padding: 3rem;
+    padding: 8rem;
     /* Tambahkan padding lebih besar untuk ruang di sekitar keseluruhan section */
 }
 
@@ -544,7 +492,7 @@ section {
 .portofolio-box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 4rem;
+    gap: 5rem;
     /* Tambahkan gap lebih besar antar portofolio-card */
 }
 
@@ -683,7 +631,7 @@ section {
     .home {
         flex-direction: column-reverse;
         margin: 5rem 0;
-        gap: 5rem;
+        gap: 3rem;
     }
 
     .home-content {
@@ -692,7 +640,7 @@ section {
     }
 
     .home-img img {
-        width: 56vw;
+        width: 45vw;
     }
 
     .about {
@@ -706,10 +654,33 @@ section {
     }
 
     .about-img {
-        width: 52vw;
+        width: 60vw;
     }
 
     .contact form {
-        flex-direction: column-reverse;
+        flex-direction: column;
+    }
+}
+
+@media(max-width:991px){
+    header {
+        padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3% 2rem;
+    }
+    .timeline-items::before {
+        left: 7px;
+    } 
+    .timeline-item:nth-child(odd) {
+        padding-right: 0;
+        text-align: left;
+    }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        padding-left: 37px;
+    }
+    .timeline-dot {
+        left: 0;
     }
 }
